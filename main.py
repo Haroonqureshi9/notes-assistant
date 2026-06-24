@@ -1,0 +1,1 @@
+print("Notes assistant is running")
