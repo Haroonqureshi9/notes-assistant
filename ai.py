@@ -10,3 +10,13 @@ def get_response(prompt):
         contents=prompt,
     )
     return result.text
+
+def stream_response(prompt):
+    stream = client.models.generate_content_stream(
+        model = "gemini-2.5-flash",
+        contents = prompt,
+    )
+    for chunk in stream:
+        print(chunk.text, end ="", flush=True)
+        print()
+    

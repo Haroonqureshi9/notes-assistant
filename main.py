@@ -1,4 +1,3 @@
-from ai import get_response
+from ai import stream_response
 
-answer = get_response("In one sentence what is phython function?")
-print(answer)
+stream_response("In one sentence, what is a function in Python?")
