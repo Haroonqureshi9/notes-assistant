@@ -1,3 +1,17 @@
 from ai import stream_response
 
-stream_response("In one sentence, what is a function in Python?")
+print("Notes Assistant — ask me anything. Type 'quit' to exit.\n")
+
+while True:
+    question = input("You: ").strip()
+
+    if question == "":
+        continue
+
+    if question.lower() == "quit":
+        print("Goodbye!")
+        break
+
+    print("\nAssistant: ", end="")
+    stream_response(question)
+    print()
